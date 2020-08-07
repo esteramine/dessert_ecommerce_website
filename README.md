@@ -20,4 +20,6 @@ Here are some special features in this project:
 3. Implemention of SCSS approach to make the whole project more systematic and readable.
 4. There is an Sweetaste logo icon next to the title of every web page!
 5. On the **Checkout Receipt** page, javascript code are added to make the Receipt Choices (Electronic and Paper version) clickable and workable.
- 
+ So, there are two choices for the receipt, and you can just ***simply click on either of it*** (the button) to get the information you have to submit.
+ <img src="https://github.com/esteramine/dessert_ecommerce_website/blob/master/img/Receipt_paperVersion.PNG?raw=true" width="300px">
+ <img src="https://github.com/esteramine/dessert_ecommerce_website/blob/master/img/Receipt_electronicVersion.PNG?raw=true" width="300px">
