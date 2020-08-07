@@ -1,0 +1,124 @@
+.checkout-receipt{
+    .wrap{
+        padding: 30px 40px;
+        max-width: 380px;
+        color: $green-light;
+        @include iphone678(){
+            padding: 30px 30px;
+        }
+        li:nth-child(-n+1){
+            margin-bottom: 16px;
+        }
+        h3{
+            font-size: $font-xl;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        h4{
+            font-weight: bold;
+            font-size: $font-m;
+            margin-bottom: 8px;
+        }
+        input{
+            height: 56px;
+            background: $green-light;
+            border: none;
+            outline: none;
+            margin-bottom: 8px;
+            padding: 0px 20px;
+            box-sizing: border-box;
+        }
+        .receiptChoice{
+            display: flex;
+            width: 100%;
+            margin-bottom: 30px;
+            a{
+                display: block;
+                text-align: center;
+                width: 50%;
+                padding: 16px 0px;
+                border: 1px solid $green-light;
+                font-size: $font-m;
+                font-weight: bold;
+                color: $green-light;
+            }
+            a:hover{
+                background: $green-light;
+                color: $green-dark;
+            }
+            .clickedBg{
+                background: $green-light;
+                color: $green-dark;
+            }
+        }
+        .mailReceipt{
+            .addressDes{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .checkboxDes{
+                    display: flex;
+                    align-items: center;
+                    input[type="checkbox"] {
+                        display:inline-block;
+                        width:16px;
+                        height:16px;
+                    }
+                    label{
+                        font-family: $font-family;
+                        color: $green-light;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+            .addressBox{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 16px;
+            
+                .city, .district{
+                    width: 48%;
+                }
+                .road{
+                    width: 100%;
+                }
+            }
+
+            .emailAddress{
+                display: none;
+                width: 100%;
+            }
+            .emailFormShow{ /*toggled when electronicReceipt is clicked*/
+                display: block;
+                margin-bottom: 16px;
+            }
+            .addressHide{ /*toggled when electronicReceipt is clicked*/
+                display: none;
+            }
+            .taxIdNumber{
+                input{
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+    input[type="submit"]{
+        width: 100%;
+        text-align: center;
+        padding: 16px 0px;
+        font-size: $font-l;
+        font-weight: bold;
+        font-family: $font-family;
+        color: $green-dark;
+        background: $yellow;
+        border: none;
+        outline: none;
+    }
+    
+}
+
+
+

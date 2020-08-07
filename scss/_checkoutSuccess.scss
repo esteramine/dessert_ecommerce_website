@@ -1,0 +1,66 @@
+.checkoutSuccess{
+    max-width: 940px;
+    overflow: hidden;
+    background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=800&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $green-dark;
+    @include iphone678(){
+        margin-bottom: 0px;
+        background-position: -250px 0;
+    }
+    h3{
+        font-size: 45px;
+        font-family: $font-family-bold;
+        font-weight: bold;
+        margin-top: 32px;
+        margin-bottom: 51px;
+        
+        @include iphone678(){
+            margin-top: 60px;
+            margin-bottom: 209px;
+        }
+    }
+    a{
+        display: block;
+        font-size: $font-l;
+        font-weight: bold;
+        padding: 17px 102px;
+        background: $yellow;
+        margin-bottom: 116px;
+        @include iphone678(){
+            text-align: center;
+            max-width: 375px;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+    }
+    a:hover{
+        background: $green-dark;
+        color: $green-light;;
+    }
+    .statusBarSuccess{ /*general settings for checkout*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 130px;
+
+        .bar{
+            background: $green-dark;
+            width: 65px;
+            height: 1px;
+        }
+    }
+}
+
+
+
+
+

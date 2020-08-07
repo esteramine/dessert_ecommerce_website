@@ -1,0 +1,359 @@
+body{
+    font-family: $font-family;
+}
+.container{
+    margin: 0 auto;
+    max-width: 940px;
+}
+a{
+    text-decoration: none;
+    color: $green-dark; 
+}
+ul{
+    list-style-type: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include ipad(){
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .menu{
+        display: none;
+    }
+    .menu:hover >.navbarCollapse{
+        display: block;
+    } 
+    @include ipad(){
+        .menu{
+            display: block;
+        }
+        .menu:hover{
+            background: #EAF0ED;
+        }
+    }
+    h1{
+        a{
+            display: block;
+            background-image: url("../img/logo-all-dark.svg");
+            background-repeat: no-repeat;
+            width: 219.5px;
+            height: 40px;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space:nowrap; 
+            @include ipad(){
+                background: url("../img/logotype-sm-dark.svg");
+                background-repeat: no-repeat;
+                width: 117px;
+                height: 20px;
+            } 
+        }
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            display: block;
+        }
+    }
+    .navbarCollapse{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        max-height: 0px;
+        @include ipad(){
+            position: absolute;
+            left: 0;
+            top:100%;
+            width: 100%;
+            transition: all 0.8s;
+            overflow: hidden;
+            background: $white;
+            flex-direction: column;
+            z-index: 99;
+        }
+
+        li{
+            margin-right: 50px;
+            @include ipad(){
+                margin-right: 0px;
+                width: 100%;
+            }
+            a{     
+                display: block;
+                padding: 5px 5px;                        
+            }
+            a:hover{
+                border-radius: 3px;
+                background-image: linear-gradient(0deg, $green-light 50%, transparent 60%);    
+            }
+            @include ipad(){
+                a{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;                
+                }
+                a:hover{
+                    background: $green-light;   
+                }
+            }
+        }
+    }
+    .active{ /*will be toggled when the menu icon is clicked*/
+        max-height: 250px;
+    }
+
+}
+
+
+/*footer starts*/
+.wrap{
+    max-width:780px;
+    margin: 0 auto;
+    @include ipad(){
+        max-width: 400px;;    
+    }
+    @include iphone678(){
+        max-width: 315px;
+    }
+}
+.footerTop{
+    background: $green-dark;
+    color: $green-light;
+}
+.email{
+    display: flex; 
+    justify-content: space-between;   
+    align-items: center;
+    @include ipad(){
+       flex-direction: column;     
+    }
+    .emailDes{
+        display: flex;
+        align-items: center;
+
+        h3{
+            font-size: $font-l;
+            line-height: 29px;
+            margin: 42px 20px;
+            @include ipad(){
+                margin: 30px 20px;
+            }    
+        }
+    }
+    .emailBox{
+        display: flex;
+        @include ipad(){
+            margin-bottom: 30px;
+        }
+        .inputEmail{
+            position: relative;
+            input{
+                padding-left: 50px;
+                width: 256px;
+                height: 56px;
+                background: $green-light;
+                border: none;
+                outline: none;
+                @include ipad(){
+                    max-width: 400px;
+                }
+                @include iphone678(){
+                    max-width: 190px;
+                }
+            }
+            img{
+                position: absolute;
+                left: 20px;
+                top: 16px;
+            }
+        }
+
+        .submitBtn{ /*email submit button*/
+            display: block;
+            padding: 17px 21px;
+            background: $yellow;
+            outline: none;
+        }
+    }
+}
+
+.wrapBtm{
+    display: flex; 
+    justify-content: space-between; 
+    @include ipad(){
+        flex-direction: column;
+    }  
+}
+.footerBtm{
+    background: $green-light;
+    color: $green-dark;
+}
+.contact{
+    .sweetasteLogo{
+        width: 172px;
+        height: 27px;
+        padding-top:38px; 
+        margin-bottom: 124px; 
+        @include ipad(){
+            margin-bottom: 39.5px;
+        } 
+    }
+
+    ul{
+        padding-bottom: 30px;
+    }
+
+    .contactInfo {
+        li{
+            margin-bottom: 8px;
+            font-family: $font-family
+        }    
+    }
+
+    .contactLink{
+        display: flex;
+        img{
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+        }
+    }
+}
+
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include ipad (){
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    h3{
+        padding-top: 30px;
+        font-size: 23px;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        font-family: $font-family-bold;
+        @include ipad(){
+            display: none;
+        }
+    }
+
+    span{
+        display: block;
+        margin-right: 13px;
+    }
+
+    p{
+        padding-bottom: 30px;
+        font-family: $font-family-en;
+    }
+}
+
+
+/*RWD starts*/
+/*@include ipad(){    
+    .header{
+        justify-content: space-around;
+        position: relative;
+        .menu{
+            display: block;
+        }
+        .menu:hover{
+            background: #EAF0ED;
+        }
+        h1 a{
+            background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-sm-dark.svg");
+            background-repeat: no-repeat;
+            width: 117px;
+            height: 20px;
+        }
+
+        .navbarCollapse{
+            position: absolute;
+            z-index: 99;
+            left: -1px;
+            top: 100%;
+            width: 200px;
+        }
+
+        .navbarCollapse{
+            position: absolute;
+            left: 0;
+            top:100%;
+            width: 100%;
+            transition: all 0.8s;
+            overflow: hidden;
+            background: $white;
+            flex-direction: column;
+            li{
+                margin-right: 0px;
+                width: 100%;
+                a{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;                
+                }
+                a:hover{
+                    background: $green-light;   
+                }
+            }
+        }  
+        .menu:hover >.navbarCollapse{
+            display: block;
+        }      
+    }
+    
+    .wrap{
+        max-width: 400px;
+    }
+    .email{
+        flex-direction: column;
+        .emailDes h3{
+            margin: 30px 20px;
+        }
+        .emailBox{
+            margin-bottom: 30px;
+            .inputEmail input{
+                max-width: 400px;
+            }
+        }
+    }
+       
+    .wrapBtm{
+        flex-direction: column;
+    }
+    .contact{
+        .sweetasteLogo{
+            margin-bottom: 39.5px;
+        }
+    } 
+    .quote {
+        justify-content: flex-start;
+        align-items: flex-start;
+        h3{
+            display: none;
+        }
+    }
+}*/
+

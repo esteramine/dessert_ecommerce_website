@@ -1,0 +1,142 @@
+.checkout{ /*general settings for checkout*/
+    max-width: 780px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 66.5px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    @include ipadSmaller(){
+        justify-content: center;
+    }
+    @include iphone678(){
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.checkout-action{ 
+    width: 59%;
+    height: auto;
+    background: $green-dark;
+    margin-bottom: auto;
+    @include ipadSmaller(){
+        width: 100%;
+    }
+    @include iphone678(){
+        margin-bottom: 0px;
+    }
+    .checkout-status{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /*&-statusBar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            li{
+                display: inline-block;
+            }
+    
+            .bar{
+                background: $green-light;
+                width: 65px;
+                height: 1px;
+            }
+        }*/
+        &-statusBar{
+            position: relative;
+            display: flex;
+            width: 195px;
+            justify-content: space-between;
+            border-top: 1px solid $green-light;
+            padding-right: 20px;
+            margin-bottom: 15px;
+            img{
+                position: absolute;
+                top: -9.5px;
+            }
+        }
+        
+    }
+}
+
+
+.orderDetails{ /*general settings for checkout*/
+    width: 38%;
+    height: auto;
+    color: $green-dark;
+    margin-bottom: auto;
+    @include ipadSmaller(){
+        display: none;
+    }
+    h3{
+        padding: 16px 0px;
+        text-align: center;
+        font-size: $font-l;
+        font-weight: bold;
+        background: $green-light;    
+    }
+    .orderSummary{
+        opacity: 60%;
+        border: 1px solid $green-light;
+        margin-bottom: 20px;
+        ul{
+            padding: 16px 20px 8px;
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            line-height: $font-m;
+            margin-bottom: 8px;
+        }
+        h4{
+            padding: 0px 20px 16px;
+            font-size: $font-m;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .shoppingList{
+        border: 1px solid $green-light;
+        margin-bottom: 60px;
+        h3{
+            opacity: 60%;
+        }
+        ul{
+            padding: 8px 20px;
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0px;
+
+            img{
+                width: 120px;
+                height: 80px;
+                object-fit: cover;
+                opacity: initial;
+            }
+            .productDes{
+                opacity: 60%;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                .productName{
+                    line-height: $font-m;
+                }
+                .productPrice{
+                    font-weight: bold;
+                    font-size: $font-m;
+                }
+            }
+
+        }
+    }
+}
