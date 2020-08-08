@@ -1,7 +1,7 @@
 # Sweetaste (Dessert E-commerce Website Practice)
 As you can see in the title, this project is a practice of a dessert e-commerce website called Sweetaste. 
 
-There are in total 5 web pages for now, including Index, Deliver, Payment, Receipt, Checkout Success pages. 
+There are in total 5 web pages for now, including Index, Delivery, Payment, Receipt, Checkout Success pages. 
 (The name of the web pages are the same with their respective scss file for easy reference. For example, scss file for **index.html** is **\_index.html**.)
 The suggested pathway to view all the webpages:
 1. **Index**: https://esteramine.github.io/dessert_ecommerce_website/page/index.html (Click on the top right shopping cart to proceed to next page)
@@ -17,7 +17,7 @@ The following is the explanation for special files:
 Here are some special features in this project:
 1. The whole website is designed with Responsive Web Design (RWD). The web pages can render well on different sizes of window as well as a variety of devices such as iPad, iPhone, and so on.
 2. The whole website includes Animate On Scroll Library (AOS) to make it more dynamic and intriguing.
-3. Implemention of SCSS approach to make the whole project more systematic and readable.
+3. Implemention of SCSS approach (including @mixin+@content) to make the whole project more systematic and readable.
 4. There is an Sweetaste logo icon next to the title of every web page!
 5. On the **Checkout Receipt** page, javascript code are added to make the Receipt Choices (Electronic and Paper version) clickable and workable.
  So, there are two choices for the receipt, and you can just ***simply click on either of it*** (the button) to get the information you have to submit.
